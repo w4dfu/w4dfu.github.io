@@ -6,9 +6,10 @@
     <title>Gatorradio.org</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
     <style>
         .banner {
-            background-color: #ff9800;
+            background-color: #fa8c17;
             color: white;
             padding: 10px;
             text-align: center;
@@ -24,6 +25,9 @@
         .project-link:hover {
             text-decoration: underline;
         }
+        .repeaters-header {
+            background-color: #fa8c17;
+        }
     </style>
 </head>
 <body>
@@ -37,17 +41,17 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Gator Amateur Radio Club</a>
+        <a class="navbar-brand" style="font-weight: bold;" href="#">Gator Amateur Radio Club</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" style="font-weight: bold;" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">About Us</a>
+                    <a class="nav-link" href="about.html">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="mailto:leaders@gatorradio.org">Contact</a>
@@ -57,33 +61,74 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container mt-4">
-        <div class="row mb-4">
-
-            <!-- Overview Block -->
+    <div class="container-md mt-4">
+        <div class="row">
             <div class="col-md-8">
-                <h2>Welcome to GARC's Website</h2>
-                
-                <!-- Old Header Image -->
-                <img src="top.gif" style="width:75%">
+                <!-- Overview Block -->
+                <div class="row mt-2">
+                    <h2 class="h1">Welcome to GARC's Website</h2>
+                    
+                    <!-- Old Header Image -->
+                    <img src="top.gif" style="width:75%">
 
-                <p>We are a student organization at the University of Florida, focused on being a community of students interested in amateur radio and adjacent hobbies.</p>
+                    <p>
+                        We are a student organization at the University of Florida, focused on being a community of students interested in 
+                        amateur radio and adjacent hobbies. The W4DFU amateur radio station was established in 1934, and thanks to the support 
+                        of AFGAR/WR4UF (Alumni and Friends of Amateur Radio) represents the Gator Nation internationally on a daily basis. We 
+                        are RadioActive Gators!
+                    </p>
 
-                <!-- Discord Card -->
-                <div class="card">
-                    <h5 class="card-header">Join our Discord!</h5>
-                    <div class="card-body">
-                      <p class="card-text">Stay up-to-date with club happenings and meet fellow student hams by joining our Discord server.</p>
-                      <a href="https://discord.gg/djjsk7J4QR" class="btn btn-primary">Link to Join</a>
+                </div>
+                <!-- Social Block -->
+                <div class="row">
+                    <div col-md-12>
+                        <div class="card mb-4">
+                            <h5 class="card-header">Join the conversation!</h5>
+                            <div class="card-body">
+                            <span class="card-text">Stay up-to-date with the club and meet other student hams by joining our Discord server.</span>
+                            <a href="https://discord.gg/djjsk7J4QR" class="btn btn-secondary" style="margin-left: 1.5rem">Join Discord <i class="bi bi-discord"></i></a>
+                            <p></p>
+                            <span class="card-text">See what GARC and its Alumni are up to on our Facebook group.</span>
+                            <a href="https://www.facebook.com/groups/W4DFU" class="btn btn-primary" style="margin-left: 1.5rem">Facebook Group <i class="bi bi-facebook"></i></a>
+                            </div>
+                        </div>  
                     </div>
                 </div>
-
+                <!-- Projects and Archive Block -->
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <!-- Project Links -->
+                        <div class="card mb-4">
+                            <div class="card-header text-center projects-header">
+                                <h2 class="h5">Active Projects</h2>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><a class="project-link" href="#">Upgraded Repeater System</a></li>
+                                    <li><a class="project-link" href="#">W4DFU Station Renovations</a></li>
+                                    <li><a class="project-link" href="#">Website Re-Design</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header text-center projects-header">
+                                <h2 class="h5">Old Website Archive</h2>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li>View our old website archived <a href="/archive">here</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <!-- Repeaters Info Bar -->
             <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header text-center bg-light">
+                <!-- Repeaters Info Bar -->
+                <div class="card mt-4">
+                    <div class="card-header text-center text-light repeaters-header">
                         <h2 class="h5">Repeater Info</h2>
                     </div>
                     <div class="card-body">
@@ -97,6 +142,7 @@
                                             <li>146.910 -0.6 MHz</li>
                                             <li>PL 123 Hz</li>
                                             <li>Location: Beaty Towers</li>
+                                            <li>Echolink & More Info</li>
                                         </ul>
                                     </td>
                                 </tr>
@@ -106,8 +152,8 @@
                                         <ul>
                                             <li>Callsign: W4DFU</li>
                                             <li>444.8125 +5 MHz</li>
-                                            <li>More Info</li>
                                             <li>Location: UF Health Shands</li>
+                                            <li>More Info</li>
                                         </ul>
                                     </td>
                                 </tr>
@@ -118,8 +164,8 @@
                                             <li>Callsign: W4DFU-3</li>
                                             <li>144.390 MHz</li>
                                             <li>APRS Digipeater</li>
-                                            <li>More Info</li>
                                             <li>Location: UF Health Shands</li>
+                                            <li>More Info</li>
                                         </ul>
                                     </td>
                                 </tr>
@@ -127,21 +173,27 @@
                         </table>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-10">
-                <!-- Project Links -->
-                <div class="card">
-                    <div class="card-header text-center bg-light">
-                        <h2 class="h5">Active Projects</h2>
+                <!-- Events Bar -->
+                <div class="card mt-4">
+                    <div class="card-header text-center text-light bg-primary">
+                        <h2 class="h5">Upcoming Events</h2>
                     </div>
                     <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li><a class="project-link" href="#">Upgraded Repeater System</a></li>
-                            <li><a class="project-link" href="#">W4DFU Station Renovations</a></li>
-                            <li><a class="project-link" href="#">Website Re-Design</a></li>
-                        </ul>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Winter Field Day</th>
+                                    <td>
+                                        <ul>
+                                            <li>Sat. Jan. 25th at 11 am to 6 pm</li>
+                                            <li>UF NATL Pavilion</li>
+                                            <li>HF operating fun!</li>
+                                            <li>All are welcome!</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
